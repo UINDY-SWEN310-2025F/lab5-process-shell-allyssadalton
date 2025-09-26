@@ -34,19 +34,8 @@ int main() {
 
 // NOTE: use execvp to do it 
 int execute( char *arglist[] ) {
-	//TODO: write your code here 		/* do it */
-	pid_t pid = fork();
-	
-	if (pid == -1){
-		perror("Fork failed.");
-		exit(1);	
-	}
-	else if (pid ==  0){
 		execvp(arglist[0], arglist);
-	}
-	wait(NULL);
-	return 0;
-	
+		exit(1);
 }
 
 // trim off newline and create storage for the string
