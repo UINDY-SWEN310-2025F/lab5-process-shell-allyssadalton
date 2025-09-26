@@ -43,8 +43,6 @@ int execute( char *arglist[] ) {
 	}
 	else if (pid ==  0){
 		execvp(arglist[0], arglist);
-        	perror("execvp failed.");
-        	exit(1);
 	}
 	wait(NULL);
 	return 0;
